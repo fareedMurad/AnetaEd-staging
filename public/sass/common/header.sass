@@ -1,0 +1,72 @@
+header
+	display: flex
+	position: fixed
+	z-index: 40
+	width: 100%
+	height: gem(68)
+	background: #FCFEFF
+	box-shadow: gem(0) gem(1) gem(20) rgba(18, 187, 240, 0.1)
+	// box-shadow: 0px 1px 20px rgba(18, 187, 240, 0.1) появится при скролле
+	align-items: center
+	justify-content: space-between
+
+.logo
+	margin-left: gem(60)
+	img
+        width: gem(148)
+        height: gem(36)
+
+.nav-menu
+	display: flex
+	align-items: center
+	.mini_line
+		position: relative
+		width: gem(1)
+		height: gem(8)
+		background-color: #A4E5F9
+		display: flex
+		top: gem(1)
+		right: gem(215)
+	a
+		transition: .3s linear
+		margin: 0 gem(25) 0 gem(25)
+		&:nth-child(8)
+			margin: 0 0 0 gem(60)
+		&:nth-child(9)
+			padding: gem(10) gem(24)
+			border: gem(1) solid #A4E5F9
+			border-radius: gem(8)
+			font-size: gem(14)
+			&:hover
+				background: #A4E5F9
+				color: #ffffff
+		&:hover
+			color: #12BBF0
+		&.active
+			color: #12BBF0
+.mobile_btn
+	display: none
+	position: absolute
+	top: gem(13)
+	right: gem(80)
+	transition: .3s linear
+	padding: gem(10) gem(24)
+	border: gem(1) solid #A4E5F9
+	border-radius: gem(8)
+	font-size: gem(14)
+	&:hover
+		background: #A4E5F9
+		color: #ffffff
+	
+
+
+@media only screen and (max-width : 1024px)
+	.nav-menu
+		display: none
+	.mobile_btn
+		display: flex
+@media only screen and (max-width : 480px)
+	header
+		.logo
+			margin-left: gem(16)
+	
